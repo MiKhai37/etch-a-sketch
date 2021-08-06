@@ -1,0 +1,42 @@
+/* CSS Style */
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+h1 {
+    padding: 10px;
+    font-size: 24px;
+    border: 1;
+}
+
+.hcenter {
+  text-align: center;  
+}
+
+.blackFill {
+  background-color: black;
+}
+
+#grid-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  border-color: green;
+}
+
+footer {
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
