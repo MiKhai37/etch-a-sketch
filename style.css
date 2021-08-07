@@ -26,7 +26,7 @@ h1 {
   text-align: center;  
 }
 
-.blackFill {
+.blackFilled {
   background-color: black;
 }
 
@@ -35,6 +35,11 @@ h1 {
   justify-content: center;
   align-content: center;
   border-color: green;
+}
+
+.btn {
+  margin: 10px;
+  padding: 10px;
 }
 
 footer {
