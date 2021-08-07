@@ -14,11 +14,9 @@ for (let i = 1; i <= gridSize; i++) {
     for (let j = 1; j <= gridSize; j++) {
         divArr[i][j] = document.createElement('div');
         divArr[i][j].classList.add('square')
-        //divArr[i][j].classList.add('row-' + i);
-        //divArr[i][j].classList.add('col-' + j);
+        divArr[i][j].classList.add('grid-item')
         divArr[i][j].style.gridRowStart = i;
         divArr[i][j].style.gridColumnStart = j;
-        //divArr[i][j].textContent = i + " " + j;
         gridContainer.appendChild(divArr[i][j]);
     }
 }
@@ -28,14 +26,15 @@ function colorBlack() {
     this.classList.add('blackFilled');
 }
 
-function clearGrid(elems) {
-    elems.forEach(elem => elem.style.backgroundColor = 'white');
+function clear() {
+    const squares = document.querySelectorAll('.square');
+    squares.forEach(square => square.classList.remove('blackFilled'))
 }
+
 
 // Select all squares and add them an Event Listener
 const squares = document.querySelectorAll('.square');
 squares.forEach(square => square.addEventListener('mouseenter', colorBlack));
-//squares.forEach(square => square.addEventListener('mouseleave', colorBlack));
 
 const clr_btn = document.querySelector('#clr-btn');
-clr_btn.addEventListener('click', clearGrid(squares));
+clr_btn.addEventListener('click', clear);

@@ -19,11 +19,28 @@ div.grid:hover {
 h1 {
     padding: 10px;
     font-size: 24px;
-    border: 1;
 }
 
 .hcenter {
   text-align: center;  
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .blackFilled {
@@ -42,10 +59,18 @@ h1 {
   padding: 10px;
 }
 
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.square {
+  border: black 1px solid;
+}
+
 footer {
   display: flex;
   flex-direction: row-reverse;
-  background-color: #333;
+  background-color: #666;
   overflow: hidden;
   position: fixed;
   bottom: 0;
